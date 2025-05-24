@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tombol Tampilkan Komentar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        #komentar-container {
+            margin-top: 20px;
+            display: none;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        
+        .komentar {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .komentar:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .nama {
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .tanggal {
+            font-size: 0.8em;
+            color: #666;
+            margin-left: 10px;
+        }
+        
+        .isi {
+            margin-top: 5px;
+            color: #444;
+        }
+        
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Postingan Blog</h1>
+    <p>Ini adalah contoh postingan blog dengan fitur komentar.</p>
+    
+    <button id="tampilkan-komentar">Tampilkan Komentar</button>
+    
+    <div id="komentar-container">
+        <!-- Komentar akan ditampilkan di sini -->
+    </div>
+
+    <script>
+        // Data komentar (bisa juga diambil dari API/database)
+        const komentarData = [
+            {
+                nama: "Andi",
+                tanggal: "24 Mei 2023",
+                isi: "Artikel yang sangat bermanfaat, terima kasih!"
+            },
+            {
+                nama: "Budi",
+                tanggal: "25 Mei 2023",
+                isi: "Saya setuju dengan poin yang disampaikan penulis."
+            },
+            {
+                nama: "Citra",
+                tanggal: "26 Mei 2023",
+                isi: "Ada yang bisa menjelaskan bagian kedua lebih detail?"
+            },
+            {
+                nama: "Dewi",
+                tanggal: "27 Mei 2023",
+                isi: "Terima kasih atas informasinya, sangat membantu pekerjaan saya."
+            }
+        ];
+
+        // Ambil elemen tombol dan container komentar
+        const tombolKomentar = document.getElementById('tampilkan-komentar');
+        const komentarContainer = document.getElementById('komentar-container');
+
+        // Tambahkan event listener untuk tombol
+        tombolKomentar.addEventListener('click', function() {
+            // Toggle tampilan komentar
+            if (komentarContainer.style.display === 'none' || komentarContainer.style.display === '') {
+                // Jika komentar belum ditampilkan, tampilkan
+                komentarContainer.style.display = 'block';
+                tombolKomentar.textContent = 'Sembunyikan Komentar';
+                
+                // Kosongkan container komentar terlebih dahulu
+                komentarContainer.innerHTML = '';
+                
+                // Tambahkan judul
+                const judul = document.createElement('h2');
+                judul.textContent = 'Komentar (' + komentarData.length + ')';
+                komentarContainer.appendChild(judul);
+                
+                // Loop melalui data komentar dan tambahkan ke container
+                komentarData.forEach(komentar => {
+                    const divKomentar = document.createElement('div');
+                    divKomentar.className = 'komentar';
+                    
+                    const divHeader = document.createElement('div');
+                    const spanNama = document.createElement('span');
+                    spanNama.className = 'nama';
+                    spanNama.textContent = komentar.nama;
+                    
+                    const spanTanggal = document.createElement('span');
+                    spanTanggal.className = 'tanggal';
+                    spanTanggal.textContent = komentar.tanggal;
+                    
+                    divHeader.appendChild(spanNama);
+                    divHeader.appendChild(spanTanggal);
+                    
+                    const divIsi = document.createElement('div');
+                    divIsi.className = 'isi';
+                    divIsi.textContent = komentar.isi;
+                    
+                    divKomentar.appendChild(divHeader);
+                    divKomentar.appendChild(divIsi);
+                    
+                    komentarContainer.appendChild(divKomentar);
+                });
+            } else {
+                // Jika komentar sudah ditampilkan, sembunyikan
+                komentarContainer.style.display = 'none';
+                tombolKomentar.textContent = 'Tampilkan Komentar';
+            }
+        });
+    </script>
+</body>
+</html>

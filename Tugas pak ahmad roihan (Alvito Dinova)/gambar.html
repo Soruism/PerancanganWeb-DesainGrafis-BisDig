@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout Gambar Fleksibel</title>
+    <style>
+      /* Reset dasar */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+      }
+
+      /* Container galeri fleksibel */
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+      }
+
+      /* Item gambar */
+      .gallery-item {
+        flex: 1 1 300px; /* Fleksibel, minimal 300px */
+        max-width: 400px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        background-color: white;
+      }
+
+      .gallery-item:hover {
+        transform: scale(1.03);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .gallery-img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .gallery-caption {
+        padding: 15px;
+        text-align: center;
+      }
+
+      .gallery-caption h3 {
+        margin-bottom: 5px;
+        color: #444;
+      }
+
+      .gallery-caption p {
+        color: #666;
+        font-size: 0.9em;
+      }
+
+      /* Responsif untuk layar kecil */
+      @media (max-width: 768px) {
+        .gallery-item {
+          flex: 1 1 100%;
+          max-width: 100%;
+        }
+      }
+
+      .back-button {
+        display: inline-block;
+        margin: 20px 0;
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+
+      .back-button:hover {
+        background-color: #45a049;
+      }
+
+      .button-container {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="button-container">
+      <!-- Tombol kembali ke halaman tertentu -->
+      <a href="a.html" class="back-button">Kembali ke Halaman Sebelumnya</a>
+    </div>
+    <h1>Galeri Gambar Fleksibel</h1>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="img/wibu.jpg" alt="Alam 1" class="gallery-img" />
+        <div class="gallery-caption">
+          <h3>Pemandangan Alam</h3>
+          <p>Keindahan alam yang menakjubkan</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="img/wibu.jpg" alt="Kota 1" class="gallery-img" />
+        <div class="gallery-caption">
+          <h3>Perkotaan Modern</h3>
+          <p>Gemerlap kehidupan kota</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="img/wibu.jpg" alt="Hewan 1" class="gallery-img" />
+        <div class="gallery-caption">
+          <h3>Satwa Liar</h3>
+          <p>Kehidupan hewan di habitatnya</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="img/wibu.jpg" alt="Makanan 1" class="gallery-img" />
+        <div class="gallery-caption">
+          <h3>Kuliner Lezat</h3>
+          <p>Hidangan dari berbagai negara</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="img/wibu.jpg" alt="Travel 1" class="gallery-img" />
+        <div class="gallery-caption">
+          <h3>Destinasi Wisata</h3>
+          <p>Tempat-tempat menakjubkan untuk dikunjungi</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="img/wibu.jpg" alt="Seni 1" class="gallery-img" />
+        <div class="gallery-caption">
+          <h3>Karya Seni</h3>
+          <p>Ekspresi kreativitas manusia</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
