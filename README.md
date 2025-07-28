@@ -1,8 +1,13 @@
-1. Komponen PromoCard ini adalah sebuah card elegan yang menampilkan gambar promo dengan efek zoom halus saat dihover, judul promosi yang mencolok, dan tombol "Daftar Sekarang" yang menarik, dirancang dengan CSS modern menggunakan properti seperti box-shadow untuk efek kedalaman, border-radius untuk sudut yang melengkung, serta transition untuk animasi yang smooth, dimana seluruh komponen memiliki lebar maksimum 350px yang responsif dengan padding dan margin yang tepat untuk menjaga keterbacaan, sementara tombol CTA-nya menggunakan warna kontras yang menarik perhatian dengan efek hover untuk meningkatkan interaktivitas pengguna.
+Proses Pengerjaan Joki Game Online di Karbit Service
+Website Karbit Service menyediakan layanan joki game online dengan proses yang mudah dan cepat. Berikut langkah-langkahnya:
 
-2. Kode ini membuat sistem tampilan komentar interaktif dengan tombol toggle yang menggunakan JavaScript untuk menyembunyikan/menampilkan section komentar secara dinamis. Terdapat tiga komentar contoh dalam bentuk card dengan informasi pengguna, tanggal, dan isi komentar yang semuanya awalnya hidden (display:none) dan akan muncul dengan efek fadeIn ketika tombol diklik, dimana teks tombol juga berubah menyesuaikan status. Kode juga menyediakan fungsi addNewComment() untuk demonstrasi penambahan komentar baru secara dinamis dengan format yang konsisten, sementara CSS memberikan tampilan modern dengan shadow, spacing, dan animasi untuk meningkatkan user experience.
+Order
+Pengguna memilih game yang diinginkan, menentukan grade atau peringkat, dan jumlah bintang/target yang ingin dicapai.
 
+Bayar
+Setelah memilih layanan, pengguna melakukan pembayaran sesuai dengan nominal yang tertera, lalu mengirimkan bukti pembayaran.
 
+Mabar (Main Bareng)
+Tim joki akan bermain bersama pengguna (jika diperlukan) atau langsung mengerjakan akun pengguna sampai target tercapai.
 
-3. Kode di atas membuat galeri gambar responsif menggunakan CSS Grid dengan layout fleksibel yang menyesuaikan jumlah kolom secara otomatis berdasarkan lebar layar (minimal 300px per item), dilengkapi efek hover interaktif seperti zoom halus dan munculnya caption dengan gradien transparan, serta desain yang konsisten di semua perangkat berkat penerapan aspect ratio 4:3, object-fit untuk mempertahankan proporsi gambar, dan tiga breakpoint media query (desktop, tablet, mobile) yang mengubah tata letak menjadi single column pada layar kecil, dengan seluruh animasi menggunakan transition CSS untuk pergerakan yang halus dan elegan.
-
+Sistem ini dirancang agar proses transaksi transparan, aman, dan efisien untuk semua pengguna jasa joki. Jika diperlukan, pengguna juga bisa memilih game tertentu seperti Mobile Legends, PUBG, Genshin Impact, dan lainnya langsung melalui halaman utama website.
